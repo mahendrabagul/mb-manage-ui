@@ -48,7 +48,6 @@ import { TenantHeaderComponent } from './components/tenant-header/tenant-header.
     FormsModule,
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
     HttpClientModule,
     NgxPaginationModule,
     ReactiveFormsModule,
