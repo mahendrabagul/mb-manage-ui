@@ -1,0 +1,36 @@
+<nav class="navbar navbar-inverse navbar-dark bg-dark mb-5">
+  <div class="container">
+    <a routerLink="/students" class="navbar-brand" style="color: white;">
+      <img src="../../../assets/logos/mb-header.png" class="d-inline-block align-top" alt="">
+      {{title}}</a>
+    <div *ngIf="isLoggedIn()" class="btn-group" dropdown>
+      <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
+              aria-controls="dropdown-basic">
+        Hi {{username}} <span class="caret"></span>
+      </button>
+      <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-basic">
+        <li *ngIf="isClerk() || isSenior() || isAdmin()" role="menuitem">
+          <a class="dropdown-item" routerLink="/students">
+            <span class="fa fa-asterisk"> View Students</span>
+          </a>
+        </li>
+        <li class="divider dropdown-divider"></li>
+        <li *ngIf="isClerk() || isSenior() || isAdmin()" role="menuitem">
+          <a class="dropdown-item" routerLink="/student-add">
+            <span class="fa fa-plus"> Add New Student</span>
+          </a>
+        </li>
+        <li class="divider dropdown-divider"></li>
+        <li *ngIf="isAdmin()" role="menuitem">
+          <a class="dropdown-item" routerLink="/dashboard">
+            <span class="fa fa-dashboard"> Dashboard</span>
+          </a>
+        </li>
+        <li class="divider dropdown-divider"></li>
+        <li *ngIf="isLoggedIn()" role="menuitem"><a class="dropdown-item" (click)="onLogout()">
+          <span class="fa fa-sign-out">Logout</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

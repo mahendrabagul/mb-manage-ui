@@ -1,0 +1,775 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>mb-manage-ui documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">mb-manage-ui documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>DashboardComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/dashboard/dashboard.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-dashboard</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./dashboard.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./dashboard.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#chartOptions">chartOptions</a>
+                            </li>
+                            <li>
+                                <a href="#labels">labels</a>
+                            </li>
+                            <li>
+                                <a href="#objChartData">objChartData</a>
+                            </li>
+                            <li>
+                                <a href="#singularArrayChartData">singularArrayChartData</a>
+                            </li>
+                            <li>
+                                <a href="#title">title</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onChartClick">onChartClick</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(tokenService: <a href="../injectables/TokenService.html">TokenService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:40</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>tokenService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/TokenService.html" target="_self" >TokenService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnInit"></a>
+                        <span class="name">
+                            <b>
+                            ngOnInit
+                            </b>
+                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ngOnInit()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:50</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onChartClick"></a>
+                        <span class="name">
+                            <b>
+                            onChartClick
+                            </b>
+                            <a href="#onChartClick"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>onChartClick(event)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:46</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>event</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="chartOptions"></a>
+                        <span class="name">
+                            <b>
+                            chartOptions
+                            </b>
+                            <a href="#chartOptions"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>chartOptions:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    responsive: true    // THIS WILL MAKE THE CHART RESPONSIVE (VISIBLE IN ANY DEVICE).
+  }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:13</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="labels"></a>
+                        <span class="name">
+                            <b>
+                            labels
+                            </b>
+                            <a href="#labels"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>labels:     <code>[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[&#x27;January&#x27;, &#x27;February&#x27;, &#x27;March&#x27;, &#x27;April&#x27;, &#x27;May&#x27;, &#x27;June&#x27;, &#x27;July&#x27;, &#x27;August&#x27;, &#x27;September&#x27;, &#x27;October&#x27;, &#x27;November&#x27;, &#x27;December&#x27;]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="objChartData"></a>
+                        <span class="name">
+                            <b>
+                            objChartData
+                            </b>
+                            <a href="#objChartData"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>objChartData:     <code>[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+    {
+      label: &#x27;MCS&#x27;,
+      data: [21, 56, 4, 31, 45, 15, 57, 61, 9, 17, 24, 59]
+    },
+    {
+      label: &#x27;BTECH&#x27;,
+      data: [47, 9, 28, 54, 77, 51, 24, 56, 58, 53, 35, 23]
+    },
+    {
+      label: &#x27;BE&#x27;,
+      data: [21, 87, 4, 13, 64, 15, 57, 61, 29, 34, 24, 59]
+    },
+    {
+      label: &#x27;PHD&#x27;,
+      data: [24, 56, 77, 53, 35, 23, 9, 28, 54, 77, 51, 24]
+    }
+  ]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:20</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="singularArrayChartData"></a>
+                        <span class="name">
+                            <b>
+                            singularArrayChartData
+                            </b>
+                            <a href="#singularArrayChartData"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>singularArrayChartData:     <code>[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[221, 56, 4, 31, 45, 15, 57, 61, 9, 17, 24, 59]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:40</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="title"></a>
+                        <span class="name">
+                            <b>
+                            title
+                            </b>
+                            <a href="#title"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>title:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;Month wise Students Details&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:11</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {Component, OnInit} from &#x27;@angular/core&#x27;;
+import {TokenService} from &#x27;src/app/services/token.service&#x27;;
+
+@Component({
+  selector: &#x27;app-dashboard&#x27;,
+  templateUrl: &#x27;./dashboard.component.html&#x27;,
+  styleUrls: [&#x27;./dashboard.component.css&#x27;]
+})
+export class DashboardComponent implements OnInit {
+
+  title &#x3D; &#x27;Month wise Students Details&#x27;;
+
+  chartOptions &#x3D; {
+    responsive: true    // THIS WILL MAKE THE CHART RESPONSIVE (VISIBLE IN ANY DEVICE).
+  };
+
+  labels &#x3D; [&#x27;January&#x27;, &#x27;February&#x27;, &#x27;March&#x27;, &#x27;April&#x27;, &#x27;May&#x27;, &#x27;June&#x27;, &#x27;July&#x27;, &#x27;August&#x27;, &#x27;September&#x27;, &#x27;October&#x27;, &#x27;November&#x27;, &#x27;December&#x27;];
+
+  // STATIC DATA FOR THE CHART IN JSON FORMAT.
+  objChartData &#x3D; [
+    {
+      label: &#x27;MCS&#x27;,
+      data: [21, 56, 4, 31, 45, 15, 57, 61, 9, 17, 24, 59]
+    },
+    {
+      label: &#x27;BTECH&#x27;,
+      data: [47, 9, 28, 54, 77, 51, 24, 56, 58, 53, 35, 23]
+    },
+    {
+      label: &#x27;BE&#x27;,
+      data: [21, 87, 4, 13, 64, 15, 57, 61, 29, 34, 24, 59]
+    },
+    {
+      label: &#x27;PHD&#x27;,
+      data: [24, 56, 77, 53, 35, 23, 9, 28, 54, 77, 51, 24]
+    }
+  ];
+
+  // STATIC DATA FOR THE CHART IN JSON FORMAT.
+  singularArrayChartData &#x3D; [221, 56, 4, 31, 45, 15, 57, 61, 9, 17, 24, 59];
+
+  constructor(private tokenService: TokenService) {
+  }
+
+  // CHART CLICK EVENT.
+  onChartClick(event) {
+    console.log(event);
+  }
+
+  ngOnInit() {
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container&quot; style&#x3D;&quot;display: block&quot;&gt;
+  &lt;h1 style&#x3D;&quot;text-align:center&quot;&gt;
+    {{title}}!
+  &lt;/h1&gt;
+&lt;/div&gt;
+&lt;hr/&gt;
+Bar Chart
+&lt;div class&#x3D;&quot;container shadow p-3 mb-5 bg-white rounded&quot;&gt;
+  &lt;canvas baseChart [chartType]&#x3D;&quot;&#x27;bar&#x27;&quot; [datasets]&#x3D;&quot;objChartData&quot; [labels]&#x3D;&quot;labels&quot; [options]&#x3D;&quot;chartOptions&quot;
+          [legend]&#x3D;&quot;true&quot;
+          (chartClick)&#x3D;&quot;onChartClick($event)&quot;&gt;
+  &lt;/canvas&gt;
+&lt;/div&gt;
+&lt;hr/&gt;
+Line Chart
+&lt;div class&#x3D;&quot;container shadow p-3 mb-5 bg-white rounded&quot;&gt;
+  &lt;canvas baseChart [chartType]&#x3D;&quot;&#x27;line&#x27;&quot; [datasets]&#x3D;&quot;objChartData&quot; [labels]&#x3D;&quot;labels&quot; [options]&#x3D;&quot;chartOptions&quot;
+          [legend]&#x3D;&quot;true&quot;
+          (chartClick)&#x3D;&quot;onChartClick($event)&quot;&gt;
+  &lt;/canvas&gt;
+&lt;/div&gt;
+&lt;hr/&gt;
+Radar Chart
+&lt;div class&#x3D;&quot;container shadow p-3 mb-5 bg-white rounded&quot;&gt;
+  &lt;canvas baseChart [chartType]&#x3D;&quot;&#x27;radar&#x27;&quot; [datasets]&#x3D;&quot;objChartData&quot; [labels]&#x3D;&quot;labels&quot; [options]&#x3D;&quot;chartOptions&quot;
+          [legend]&#x3D;&quot;true&quot;
+          (chartClick)&#x3D;&quot;onChartClick($event)&quot;&gt;
+  &lt;/canvas&gt;
+&lt;/div&gt;
+&lt;hr/&gt;
+Pie Chart
+&lt;div class&#x3D;&quot;container shadow p-3 mb-5 bg-white rounded&quot;&gt;
+  &lt;canvas baseChart [chartType]&#x3D;&quot;&#x27;pie&#x27;&quot; [data]&#x3D;&quot;singularArrayChartData&quot; [labels]&#x3D;&quot;labels&quot;
+          (chartClick)&#x3D;&quot;onChartClick($event)&quot;&gt;
+  &lt;/canvas&gt;
+&lt;/div&gt;
+&lt;hr/&gt;
+PolarArea Chart
+&lt;div class&#x3D;&quot;container shadow p-3 mb-5 bg-white rounded&quot;&gt;
+  &lt;canvas baseChart [chartType]&#x3D;&quot;&#x27;polarArea&#x27;&quot; [data]&#x3D;&quot;singularArrayChartData&quot; [labels]&#x3D;&quot;labels&quot; [options]&#x3D;&quot;chartOptions&quot;
+          [legend]&#x3D;&quot;true&quot; (chartClick)&#x3D;&quot;onChartClick($event)&quot;&gt;
+  &lt;/canvas&gt;
+&lt;/div&gt;
+&lt;hr/&gt;
+Doughnut Chart
+&lt;div class&#x3D;&quot;container shadow p-3 mb-5 bg-white rounded&quot;&gt;
+  &lt;canvas baseChart [chartType]&#x3D;&quot;&#x27;doughnut&#x27;&quot; [data]&#x3D;&quot;singularArrayChartData&quot; [labels]&#x3D;&quot;labels&quot;
+          (chartClick)&#x3D;&quot;onChartClick($event)&quot;&gt;
+  &lt;/canvas&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./dashboard.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="container" style="display: block">  <h1 style="text-align:center">    {{title}}!  </h1></div><hr/>Bar Chart<div class="container shadow p-3 mb-5 bg-white rounded">  <canvas baseChart [chartType]="\'bar\'" [datasets]="objChartData" [labels]="labels" [options]="chartOptions"          [legend]="true"          (chartClick)="onChartClick($event)">  </canvas></div><hr/>Line Chart<div class="container shadow p-3 mb-5 bg-white rounded">  <canvas baseChart [chartType]="\'line\'" [datasets]="objChartData" [labels]="labels" [options]="chartOptions"          [legend]="true"          (chartClick)="onChartClick($event)">  </canvas></div><hr/>Radar Chart<div class="container shadow p-3 mb-5 bg-white rounded">  <canvas baseChart [chartType]="\'radar\'" [datasets]="objChartData" [labels]="labels" [options]="chartOptions"          [legend]="true"          (chartClick)="onChartClick($event)">  </canvas></div><hr/>Pie Chart<div class="container shadow p-3 mb-5 bg-white rounded">  <canvas baseChart [chartType]="\'pie\'" [data]="singularArrayChartData" [labels]="labels"          (chartClick)="onChartClick($event)">  </canvas></div><hr/>PolarArea Chart<div class="container shadow p-3 mb-5 bg-white rounded">  <canvas baseChart [chartType]="\'polarArea\'" [data]="singularArrayChartData" [labels]="labels" [options]="chartOptions"          [legend]="true" (chartClick)="onChartClick($event)">  </canvas></div><hr/>Doughnut Chart<div class="container shadow p-3 mb-5 bg-white rounded">  <canvas baseChart [chartType]="\'doughnut\'" [data]="singularArrayChartData" [labels]="labels"          (chartClick)="onChartClick($event)">  </canvas></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'StudentAddComponent', 'selector': 'app-student-add'},{'name': 'StudentDetailComponent', 'selector': 'app-student-detail'},{'name': 'StudentEditComponent', 'selector': 'app-student-edit'},{'name': 'StudentsComponent', 'selector': 'app-students'},{'name': 'StylishPaginationComponent', 'selector': 'app-stylish-pagination'},{'name': 'TenantHeaderComponent', 'selector': 'app-tenant-header'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'DashboardComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'DashboardComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
