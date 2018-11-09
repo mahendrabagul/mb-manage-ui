@@ -4,7 +4,7 @@
 
 **Tech Stack**
 * Spring boot 2.1.0
-* Angular 7.0.2
+* Angular 7.0.3
 
 **Steps to run** 
 
