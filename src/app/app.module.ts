@@ -28,6 +28,7 @@ import {NgxSpinnerModule} from 'ngx-spinner';
 import {ModalModule} from 'ngx-bootstrap/modal';
 import {TooltipModule} from 'ngx-bootstrap/tooltip';
 import { TenantHeaderComponent } from './components/tenant-header/tenant-header.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { TenantHeaderComponent } from './components/tenant-header/tenant-header.
     StudentAddComponent,
     StudentEditComponent,
     StylishPaginationComponent,
-    TenantHeaderComponent
+    TenantHeaderComponent,
+    PageNotFoundComponent
   ],
   imports: [
     FormsModule,

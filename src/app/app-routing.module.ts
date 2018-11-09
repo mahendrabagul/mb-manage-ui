@@ -8,6 +8,7 @@ import {StudentAddComponent} from './components/student-add/student-add.componen
 import {StudentEditComponent} from './components/student-edit/student-edit.component';
 import {AuthGuardService} from './services/auth-guard/auth-guard.service';
 import {RoleGuardService} from './services/role-guard/role-guard.service';
+import {PageNotFoundComponent} from './components/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
@@ -51,8 +52,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: '/login',
-    pathMatch: 'full'
+    component: PageNotFoundComponent,
   }
 ];
 

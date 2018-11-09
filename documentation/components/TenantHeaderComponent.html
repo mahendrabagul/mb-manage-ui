@@ -483,8 +483,8 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {Component, DoCheck, OnInit} from &#x27;@angular/core&#x27;;
-import {TokenService} from &#x27;../../services/token.service&#x27;;
-import {AuthService} from &#x27;../../services/auth.service&#x27;;
+import {TokenService} from &#x27;../../services/token/token.service&#x27;;
+import {AuthService} from &#x27;../../services/auth/auth.service&#x27;;
 
 @Component({
   selector: &#x27;app-tenant-header&#x27;,
@@ -578,7 +578,7 @@ export class TenantHeaderComponent implements OnInit, DoCheck {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><div class="row justify-content-center shadow p-3 mb-5 bg-white rounded" *ngIf="isLoggedIn()">  <div class="col-md-2 row justify-content-center">    <img [src]="getTenantImage()"/>  </div>  <div class="col-md-10">    <h4 class="batman">{{tenantName}}</h4>  </div></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'StudentAddComponent', 'selector': 'app-student-add'},{'name': 'StudentDetailComponent', 'selector': 'app-student-detail'},{'name': 'StudentEditComponent', 'selector': 'app-student-edit'},{'name': 'StudentsComponent', 'selector': 'app-students'},{'name': 'StylishPaginationComponent', 'selector': 'app-stylish-pagination'},{'name': 'TenantHeaderComponent', 'selector': 'app-tenant-header'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'StudentAddComponent', 'selector': 'app-student-add'},{'name': 'StudentDetailComponent', 'selector': 'app-student-detail'},{'name': 'StudentEditComponent', 'selector': 'app-student-edit'},{'name': 'StudentsComponent', 'selector': 'app-students'},{'name': 'StylishPaginationComponent', 'selector': 'app-stylish-pagination'},{'name': 'TenantHeaderComponent', 'selector': 'app-tenant-header'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'TenantHeaderComponent'};
 </script>

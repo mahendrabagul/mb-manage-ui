@@ -400,9 +400,9 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {Component, OnInit} from &#x27;@angular/core&#x27;;
 import {Student} from &#x27;src/app/models/student&#x27;;
-import {StudentApiService} from &#x27;src/app/services/student-api.service&#x27;;
+import {StudentApiService} from &#x27;src/app/services/student/student-api.service&#x27;;
 import {ActivatedRoute} from &#x27;@angular/router&#x27;;
-import {TokenService} from &#x27;../../services/token.service&#x27;;
+import {TokenService} from &#x27;../../services/token/token.service&#x27;;
 
 @Component({
   selector: &#x27;app-student-detail&#x27;,
@@ -504,7 +504,7 @@ export class StudentDetailComponent implements OnInit {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><div class="container">  <div class="card cards shadow p-3 mb-5 bg-white rounded">    <div class="card-header">      <div class="row justify-content-center">        <div><strong>{{student?.fullName}}</strong></div>      </div>    </div>    <br/>    <div class="row">      <div class="col-md-4">        <img class="card-img-top" [src]="getImage(student)" style="width: 100%;height: 100%"             alt="Card image cap">      </div>      <div class="col-md-8">        <hr/>        <div class="row justify-content-center">          <ul class="list-group list-group-flush">            <li class="list-group-item"><strong>Roll Number</strong> : {{student?.rollNumber}}</li>            <li class="list-group-item"><strong>City</strong> : {{student?.city}}</li>            <li class="list-group-item"><strong>Admission Date</strong> : {{student?.createdAt | truncatedate}}</li>            <li class="list-group-item"><strong>Admission to year</strong> : {{student?.admissionYear}}</li>            <li class="list-group-item"><strong>Admission For</strong> : {{student?.degree}}</li>            <li class="list-group-item"><strong>Admitted By</strong> : {{student?.createdBy.userName}}</li>          </ul>        </div>        <hr/>      </div>    </div>  </div></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'StudentAddComponent', 'selector': 'app-student-add'},{'name': 'StudentDetailComponent', 'selector': 'app-student-detail'},{'name': 'StudentEditComponent', 'selector': 'app-student-edit'},{'name': 'StudentsComponent', 'selector': 'app-students'},{'name': 'StylishPaginationComponent', 'selector': 'app-stylish-pagination'},{'name': 'TenantHeaderComponent', 'selector': 'app-tenant-header'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'StudentAddComponent', 'selector': 'app-student-add'},{'name': 'StudentDetailComponent', 'selector': 'app-student-detail'},{'name': 'StudentEditComponent', 'selector': 'app-student-edit'},{'name': 'StudentsComponent', 'selector': 'app-students'},{'name': 'StylishPaginationComponent', 'selector': 'app-stylish-pagination'},{'name': 'TenantHeaderComponent', 'selector': 'app-tenant-header'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'StudentDetailComponent'};
 </script>

@@ -4,6 +4,7 @@
 
 **Tech Stack**
 * Spring boot 2.1.0
+
 * Angular 7.0.3
 
 **Steps to run** 
@@ -51,7 +52,7 @@ Roles(clerk, senior);
 
 `UserName("npawar");`
 
-`Password("nitin@123");`
+`Password("pawar@123");`
 
 `Roles(clerk);`
 

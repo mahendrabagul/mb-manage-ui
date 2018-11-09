@@ -177,7 +177,7 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, studentApiService: <a href="../injectables/StudentApiService.html">StudentApiService</a>, commonService: <a href="../injectables/CommonService.html">CommonService</a>, tokenService: <a href="../injectables/TokenService.html">TokenService</a>)</code>
+<code>constructor(route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, studentApiService: <a href="../injectables/StudentApiService.html">StudentApiService</a>, commonService: <a href="../injectables/CommonService.html">CommonService</a>)</code>
                     </td>
                 </tr>
                         <tr>
@@ -247,18 +247,6 @@
                                                     </td>
                                                     
                                                 </tr>
-                                                <tr>
-                                                        <td>tokenService</td>
-                                                  
-                                                        <td>
-                                                                    <code><a href="../injectables/TokenService.html" target="_self" >TokenService</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
                                         </tbody>
                                     </table>
                             </div>
@@ -299,7 +287,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/app/components/student-edit/student-edit.component.ts:54</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/components/student-edit/student-edit.component.ts:53</a></div>
                             </td>
                         </tr>
 
@@ -337,7 +325,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/components/student-edit/student-edit.component.ts:37</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/components/student-edit/student-edit.component.ts:36</a></div>
                             </td>
                         </tr>
 
@@ -375,7 +363,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/components/student-edit/student-edit.component.ts:50</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/components/student-edit/student-edit.component.ts:49</a></div>
                             </td>
                         </tr>
 
@@ -550,10 +538,10 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {Component, OnInit} from &#x27;@angular/core&#x27;;
 import {ActivatedRoute, Router} from &#x27;@angular/router&#x27;;
-import {StudentApiService} from &#x27;src/app/services/student-api.service&#x27;;
+import {StudentApiService} from &#x27;src/app/services/student/student-api.service&#x27;;
 import {FormControl, FormGroup, Validators} from &#x27;@angular/forms&#x27;;
-import {CommonService} from &#x27;src/app/services/common.service&#x27;;
-import {TokenService} from &#x27;../../services/token.service&#x27;;
+import {CommonService} from &#x27;src/app/services/common/common.service&#x27;;
+import {TokenService} from &#x27;../../services/token/token.service&#x27;;
 
 @Component({
   selector: &#x27;app-student-edit&#x27;,
@@ -580,8 +568,7 @@ export class StudentEditComponent implements OnInit {
   constructor(private route: ActivatedRoute,
               private router: Router,
               private studentApiService: StudentApiService,
-              private commonService: CommonService,
-              private tokenService: TokenService) {
+              private commonService: CommonService) {
   }
 
   ngOnInit() {
@@ -727,7 +714,7 @@ export class StudentEditComponent implements OnInit {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><div class="card shadow p-3 mb-5 bg-white rounded">  <div class="card-body">    <h4 class="card-title">Edit Student</h4>    <hr/>    <form [formGroup]="angForm" novalidate>      <div class="form-group">        <label class="col-xs-12 col-12">Roll Number</label>        <input type="text" class="form-control" formControlName="rollNumber"/>      </div>      <div class="form-group">        <label class="col-xs-12 col-12">Full Name</label>        <input type="text" class="form-control" formControlName="fullName"/>      </div>      <div        *ngIf="angForm.controls[\'fullName\'].invalid && (angForm.controls[\'fullName\'].dirty || angForm.controls[\'fullName\'].touched)"        class="alert alert-danger">        <div *ngIf="angForm.controls[\'fullName\'].errors.required">          Full Name is required.        </div>      </div>      <div class="form-group">        <label class="col-xs-12 col-12">Admission Year</label>        <select formControlName="admissionYear" class="form-control" class="custom-select mb-3">          <option *ngFor="let year of years"> {{year}}</option>        </select>      </div>      <div        *ngIf="angForm.controls[\'admissionYear\'].invalid && (angForm.controls[\'admissionYear\'].dirty || angForm.controls[\'admissionYear\'].touched)"        class="alert alert-danger">        <div *ngIf="angForm.controls[\'admissionYear\'].errors.required">          Admission Year is required.        </div>      </div>      <div class="form-group">        <label class="col-xs-12 col-12">Select Admission to Degree</label>        <select formControlName="degree" class="form-control" class="custom-select mb-3">          <option *ngFor="let degree of degrees"> {{degree}}</option>        </select>      </div>      <div        *ngIf="angForm.controls[\'degree\'].invalid && (angForm.controls[\'degree\'].dirty || angForm.controls[\'degree\'].touched)"        class="alert alert-danger">`        <div *ngIf="angForm.controls[\'degree\'].errors.required">          Admission to Degree is required.        </div>      </div>      <div class="form-group">        <label class="col-xs-12 col-12">City</label>        <input type="text" class="form-control" formControlName="city"/>      </div>      <div        *ngIf="angForm.controls[\'city\'].invalid && (angForm.controls[\'city\'].dirty || angForm.controls[\'city\'].touched)"        class="alert alert-danger">        <div *ngIf="angForm.controls[\'city\'].errors.required">          City is required.        </div>      </div>      <div class="form-group">        <button (click)="editStudent()" [disabled]="angForm.pristine || angForm.invalid" class="btn btn-primary">          <span class="fa fa-pencil">Edit Student</span>        </button>        &nbsp;&nbsp;        <button class="btn btn-primary" routerLink="/student-add">          <span class="fa fa-plus">Add new student</span>        </button>      </div>    </form>  </div></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'StudentAddComponent', 'selector': 'app-student-add'},{'name': 'StudentDetailComponent', 'selector': 'app-student-detail'},{'name': 'StudentEditComponent', 'selector': 'app-student-edit'},{'name': 'StudentsComponent', 'selector': 'app-students'},{'name': 'StylishPaginationComponent', 'selector': 'app-stylish-pagination'},{'name': 'TenantHeaderComponent', 'selector': 'app-tenant-header'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'StudentAddComponent', 'selector': 'app-student-add'},{'name': 'StudentDetailComponent', 'selector': 'app-student-detail'},{'name': 'StudentEditComponent', 'selector': 'app-student-edit'},{'name': 'StudentsComponent', 'selector': 'app-students'},{'name': 'StylishPaginationComponent', 'selector': 'app-stylish-pagination'},{'name': 'TenantHeaderComponent', 'selector': 'app-tenant-header'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'StudentEditComponent'};
 </script>

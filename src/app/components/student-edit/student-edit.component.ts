@@ -30,8 +30,7 @@ export class StudentEditComponent implements OnInit {
   constructor(private route: ActivatedRoute,
               private router: Router,
               private studentApiService: StudentApiService,
-              private commonService: CommonService,
-              private tokenService: TokenService) {
+              private commonService: CommonService) {
   }
 
   ngOnInit() {

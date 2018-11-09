@@ -35,7 +35,7 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>FooterComponent</li>
+  <li>PageNotFoundComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,7 +61,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/components/footer/footer.component.ts</code>
+    <code>src/app/components/page-not-found/page-not-found.component.ts</code>
 </p>
 
 
@@ -91,19 +91,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-footer</code></td>
+                <td class="col-md-9"><code>app-page-not-found</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./footer.component.css</code></td>
+                <td class="col-md-9"><code>./page-not-found.component.css</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./footer.component.html</code></td>
+                <td class="col-md-9"><code>./page-not-found.component.html</code></td>
             </tr>
 
 
@@ -156,7 +156,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/components/footer/footer.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/components/page-not-found/page-not-found.component.ts:8</a></div>
                             </td>
                         </tr>
 
@@ -195,7 +195,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/components/footer/footer.component.ts:13</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/components/page-not-found/page-not-found.component.ts:12</a></div>
                             </td>
                         </tr>
 
@@ -218,17 +218,16 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {Component, OnInit} from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
 
 @Component({
-  selector: &#x27;app-footer&#x27;,
-  templateUrl: &#x27;./footer.component.html&#x27;,
-  styleUrls: [&#x27;./footer.component.css&#x27;]
+  selector: &#x27;app-page-not-found&#x27;,
+  templateUrl: &#x27;./page-not-found.component.html&#x27;,
+  styleUrls: [&#x27;./page-not-found.component.css&#x27;]
 })
-export class FooterComponent implements OnInit {
+export class PageNotFoundComponent implements OnInit {
 
-  constructor() {
-  }
+  constructor() { }
 
   ngOnInit() {
   }
@@ -238,28 +237,22 @@ export class FooterComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;footer class&#x3D;&quot;footer&quot;&gt;
-  &lt;div class&#x3D;&quot;container&quot;&gt;
-    &lt;span&gt;&amp;copy; All rights reserved for &lt;i&gt;MB Manage Pvt. Ltd. | &lt;a href&#x3D;&quot;https://mahendrabagul.github.io&quot;&gt;https://mahendrabagul.github.io&lt;/a&gt;&lt;/i&gt; 2018&lt;/span&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;card shadow p-3 mb-5 bg-white rounded&quot;&gt;
+  &lt;div class&#x3D;&quot;card-body&quot;&gt;
+    &lt;div class&#x3D;&quot;row justify-content-center&quot;&gt;
+      &lt;strong&gt; We are sorry, the requested page could not be found. Please try accessing all students by clicking
+        [&lt;a class&#x3D;&quot;link&quot; routerLink&#x3D;&quot;/students&quot;&gt; All Students &lt;/a&gt;]!!! &lt;/strong&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
-&lt;/footer&gt;
+&lt;/div&gt;
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./footer.component.css</code>
+                    <code>./page-not-found.component.css</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: rgb(40, 36, 42);
-  color: white;
-  text-align: center;
-}
-</code></pre>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -287,10 +280,10 @@ export class FooterComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><footer class="footer">  <div class="container">    <span>&copy; All rights reserved for <i>MB Manage Pvt. Ltd. | <a href="https://mahendrabagul.github.io">https://mahendrabagul.github.io</a></i> 2018</span>  </div></footer></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="card shadow p-3 mb-5 bg-white rounded">  <div class="card-body">    <div class="row justify-content-center">      <strong> We are sorry, the requested page could not be found. Please try accessing all students by clicking        [<a class="link" routerLink="/students"> All Students </a>]!!! </strong>    </div>  </div></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'StudentAddComponent', 'selector': 'app-student-add'},{'name': 'StudentDetailComponent', 'selector': 'app-student-detail'},{'name': 'StudentEditComponent', 'selector': 'app-student-edit'},{'name': 'StudentsComponent', 'selector': 'app-students'},{'name': 'StylishPaginationComponent', 'selector': 'app-stylish-pagination'},{'name': 'TenantHeaderComponent', 'selector': 'app-tenant-header'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'FooterComponent'};
+    var ACTUAL_COMPONENT = {'name': 'PageNotFoundComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -324,7 +317,7 @@ export class FooterComponent implements OnInit {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'FooterComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'PageNotFoundComponent.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>
