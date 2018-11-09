@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Student} from 'src/app/models/student';
-import {StudentApiService} from 'src/app/services/student-api.service';
+import {StudentApiService} from 'src/app/services/student/student-api.service';
 import {ActivatedRoute} from '@angular/router';
-import {TokenService} from '../../services/token.service';
+import {TokenService} from '../../services/token/token.service';
 
 @Component({
   selector: 'app-student-detail',

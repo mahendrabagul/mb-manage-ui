@@ -6,8 +6,8 @@ import {StudentsComponent} from './components/students/students.component';
 import {StudentDetailComponent} from './components/student-detail/student-detail.component';
 import {StudentAddComponent} from './components/student-add/student-add.component';
 import {StudentEditComponent} from './components/student-edit/student-edit.component';
-import {AuthGuardService} from './services/auth-guard.service';
-import {RoleGuardService} from './services/role-guard.service';
+import {AuthGuardService} from './services/auth-guard/auth-guard.service';
+import {RoleGuardService} from './services/role-guard/role-guard.service';
 
 const routes: Routes = [
   {

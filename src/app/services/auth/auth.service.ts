@@ -1,10 +1,10 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {User} from '../models/user';
-import {AuthToken} from '../models/authtoken';
-import {TokenService} from './token.service';
-import {environment} from '../../environments/environment';
+import {User} from '../../models/user';
+import {AuthToken} from '../../models/authtoken';
+import {TokenService} from '../token/token.service';
+import {environment} from '../../../environments/environment';
 
 const resourceUrl = environment.API_URL + '/api/v1/auth';
 

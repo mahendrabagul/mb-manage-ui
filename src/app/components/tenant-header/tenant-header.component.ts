@@ -1,6 +1,6 @@
 import {Component, DoCheck, OnInit} from '@angular/core';
-import {TokenService} from '../../services/token.service';
-import {AuthService} from '../../services/auth.service';
+import {TokenService} from '../../services/token/token.service';
+import {AuthService} from '../../services/auth/auth.service';
 
 @Component({
   selector: 'app-tenant-header',

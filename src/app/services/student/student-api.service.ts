@@ -3,11 +3,11 @@ import {Observable, of} from 'rxjs';
 import {HttpClient, HttpHeaders, HttpResponse} from '@angular/common/http';
 import {catchError, tap} from 'rxjs/operators';
 
-import {Student} from '../models/student';
-import {createRequestOption} from '../helpers/request-util';
-import {environment} from '../../environments/environment';
-import {User} from '../models/user';
-import {TokenService} from './token.service';
+import {Student} from '../../models/student';
+import {createRequestOption} from '../../helpers/request-util';
+import {environment} from '../../../environments/environment';
+import {User} from '../../models/user';
+import {TokenService} from '../token/token.service';
 
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})

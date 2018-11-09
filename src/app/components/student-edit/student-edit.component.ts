@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {StudentApiService} from 'src/app/services/student-api.service';
+import {StudentApiService} from 'src/app/services/student/student-api.service';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {CommonService} from 'src/app/services/common.service';
-import {TokenService} from '../../services/token.service';
+import {CommonService} from 'src/app/services/common/common.service';
+import {TokenService} from '../../services/token/token.service';
 
 @Component({
   selector: 'app-student-edit',

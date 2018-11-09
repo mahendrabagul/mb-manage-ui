@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
 import * as jwt_decode from 'jwt-decode';
-import {AuthToken} from '../models/authtoken';
+import {AuthToken} from '../../models/authtoken';
 import {Router} from '@angular/router';
-import {TokenPayload} from '../models/tokenPayload';
+import {TokenPayload} from '../../models/tokenPayload';
 
 export const TOKEN_NAME = 'token';
 

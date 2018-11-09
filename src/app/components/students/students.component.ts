@@ -1,7 +1,7 @@
 import {Component, OnInit, TemplateRef} from '@angular/core';
-import {StudentApiService} from 'src/app/services/student-api.service';
+import {StudentApiService} from 'src/app/services/student/student-api.service';
 import {Router} from '@angular/router';
-import {TokenService} from 'src/app/services/token.service';
+import {TokenService} from 'src/app/services/token/token.service';
 import {HttpHeaders, HttpResponse} from '@angular/common/http';
 import {NgxSpinnerService} from 'ngx-spinner';
 import {BsModalRef, BsModalService} from 'ngx-bootstrap';

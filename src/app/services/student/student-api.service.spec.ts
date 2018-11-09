@@ -2,7 +2,7 @@ import {TestBed} from '@angular/core/testing';
 
 import {StudentApiService} from './student-api.service';
 import {RouterTestingModule} from '@angular/router/testing';
-import {TokenService} from './token.service';
+import {TokenService} from '../token/token.service';
 import {HttpClientModule} from '@angular/common/http';
 
 describe('StudentApiService', () => {

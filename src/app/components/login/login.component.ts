@@ -1,11 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {User} from 'src/app/models/user';
-import {AuthService} from 'src/app/services/auth.service';
-import {TokenService} from 'src/app/services/token.service';
+import {AuthService} from 'src/app/services/auth/auth.service';
+import {TokenService} from 'src/app/services/token/token.service';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {NgxSpinnerService} from 'ngx-spinner';
-import {CommonService} from '../../services/common.service';
+import {CommonService} from '../../services/common/common.service';
 
 @Component({
   selector: 'app-login',

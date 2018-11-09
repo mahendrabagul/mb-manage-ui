@@ -13,13 +13,13 @@ import {StudentEditComponent} from './components/student-edit/student-edit.compo
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {NgxPaginationModule} from 'ngx-pagination';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
-import {AuthService} from './services/auth.service';
-import {AuthGuardService} from './services/auth-guard.service';
-import {StudentApiService} from './services/student-api.service';
+import {AuthService} from './services/auth/auth.service';
+import {AuthGuardService} from './services/auth-guard/auth-guard.service';
+import {StudentApiService} from './services/student/student-api.service';
 import {JwtInterceptor} from './helpers/JwtInterceptor';
 import {ErrorInterceptor} from './helpers/ErrorInterceptor';
 import {TruncateDatePipe} from './pipes/truncate-date-pipe';
-import {CommonService} from './services/common.service';
+import {CommonService} from './services/common/common.service';
 import {StylishPaginationComponent} from './components/stylish-pagination/stylish-pagination.component';
 import {ChartsModule} from 'ng2-charts';
 import {AlertModule} from 'ngx-bootstrap';

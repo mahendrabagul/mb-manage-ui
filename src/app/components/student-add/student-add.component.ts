@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
-import {StudentApiService} from 'src/app/services/student-api.service';
+import {StudentApiService} from 'src/app/services/student/student-api.service';
 import {Student} from 'src/app/models/student';
-import {CommonService} from 'src/app/services/common.service';
+import {CommonService} from 'src/app/services/common/common.service';
 import {Router} from '@angular/router';
 
 @Component({
