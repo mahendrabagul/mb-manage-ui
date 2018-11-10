@@ -9,7 +9,6 @@ import {Page} from 'src/app/models/page';
 export class StylishPaginationComponent implements OnInit, OnChanges {
   @Input() maxPages: number;
   @Input() currentPage: number;
-  @Input() postsPerPage: number[];
   @Input() itemsPerPage: number;
 
   @Output() changePage = new EventEmitter();
