@@ -26,7 +26,6 @@ export class StylishPaginationComponent implements OnInit, OnChanges {
     if (this.maxPages) {
       this.createPages();
     }
-    // this.currentPage = 1;
   }
 
   setPage(page: number, itemsPerPage: number) {
@@ -48,13 +47,19 @@ export class StylishPaginationComponent implements OnInit, OnChanges {
     for (const property in changes) {
       if (property === 'itemsPerPage') {
         this.itemsPerPage = changes[property].currentValue;
-        // console.log('Previous:', changes[property].previousValue);
-        // console.log('Current:', changes[property].currentValue);
-        // console.log('firstChange:', changes[property].firstChange);
+        // console.log('itemsPerPage Previous:', changes[property].previousValue);
+        // console.log('itemsPerPage Current:', changes[property].currentValue);
+        // console.log('itemsPerPage firstChange:', changes[property].firstChange);
       } else if (property === 'maxPages') {
         this.maxPages = changes[property].currentValue;
+        // console.log('maxPages Previous:', changes[property].previousValue);
+        // console.log('maxPages Current:', changes[property].currentValue);
+        // console.log('maxPages firstChange:', changes[property].firstChange);
       } else if (property === 'currentPage') {
         this.currentPage = changes[property].currentValue;
+        // console.log('currentPage Previous:', changes[property].previousValue);
+        // console.log('currentPage Current:', changes[property].currentValue);
+        // console.log('currentPage firstChange:', changes[property].firstChange);
       }
     }
     if (this.maxPages) {

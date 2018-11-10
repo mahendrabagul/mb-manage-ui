@@ -23,15 +23,21 @@ export class StudentService {
   constructor(private http: HttpClient, private tokenService: TokenService) {
   }
 
-  getStudents(req?: any, searchKeyWord?: string): Observable<HttpResponse<Student[]>> {
-    const options = createRequestOption(req);
+  // for search functionality but can be integrated with other method i.e. getStudents
+  searchStudents(req?: any, searchKeyWord?: string) {
     let newUrl = this.apiUrl;
+    const options = createRequestOption(req);
     if (searchKeyWord !== '' && searchKeyWord !== undefined) {
       newUrl = newUrl + '?searchKeyWord=' + searchKeyWord + '&';
     } else {
       newUrl = newUrl + '?';
     }
     return this.http.get<any>(newUrl + 'tenantId=' + this.tokenService.getTenantId(), {params: options, observe: 'response'});
+  }
+
+  getStudents(req?: any): Observable<HttpResponse<Student[]>> {
+    const options = createRequestOption(req);
+    return this.http.get<any>(this.apiUrl + '?tenantId=' + this.tokenService.getTenantId(), {params: options, observe: 'response'});
   }
 
   getStudent(studentId: string): Observable<Student> {

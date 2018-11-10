@@ -13,14 +13,14 @@ import {Student} from '../../models/student';
   styleUrls: ['./students.component.css']
 })
 export class StudentsComponent implements OnInit {
-   pageTitle = 'List of Students';
-   students: Student[];
-   currentPage = 1;
-   itemsPerPage = 10;
-   totalItems: number;
-   maxPages = 0;
-   modalRef: BsModalRef;
-   searchKeyWord = undefined;
+  pageTitle = 'List of Students';
+  students: Student[];
+  currentPage = 1;
+  itemsPerPage = 10;
+  totalItems: number;
+  maxPages = 0;
+  modalRef: BsModalRef;
+  searchKeyWord = undefined;
 
   constructor(private modalService: BsModalService, private studentService: StudentService,
               private spinner: NgxSpinnerService,
@@ -30,11 +30,32 @@ export class StudentsComponent implements OnInit {
   pageChanged(event) {
     this.currentPage = event.page || 1;
     this.itemsPerPage = event.itemsPerPage;
-    this.loadDetailsByPage();
+    if (this.searchKeyWord) {
+      // pagination for search
+      this.searchByKeyWord(this.buildPageRequest());
+    } else {
+      // load with default page details
+      this.loadDetailsByPage();
+    }
   }
 
-  searchByKeyWord() {
-    this.loadDetailsByPage();
+  searchByKeyWord(pageRequest?: any) {
+    // if user directly clicks search button, ideally he should be shown first page
+    if (!pageRequest) {
+      pageRequest = {
+        page: 0,
+        size: this.itemsPerPage
+      };
+      this.currentPage = 1;
+    }
+    this.spinner.show();
+    this.studentService.searchStudents(pageRequest, this.searchKeyWord)
+      .subscribe((res: HttpResponse<Student[]>) => {
+        this.paginateStudents(res.body, res.headers);
+        setTimeout(() => {
+          this.spinner.hide();
+        }, 300);
+      });
   }
 
   goToDetails(studentId: string) {
@@ -51,7 +72,7 @@ export class StudentsComponent implements OnInit {
 
   loadDetailsByPage() {
     this.spinner.show();
-    this.studentService.getStudents(this.buildPageRequest(), this.searchKeyWord)
+    this.studentService.getStudents(this.buildPageRequest())
       .subscribe((res: HttpResponse<Student[]>) => {
         this.paginateStudents(res.body, res.headers);
         setTimeout(() => {
@@ -71,8 +92,10 @@ export class StudentsComponent implements OnInit {
   private paginateStudents(data: Student[], headers: HttpHeaders) {
     this.totalItems = parseInt(headers.get('X-Total-Count'));
     this.maxPages = Math.ceil(this.totalItems / this.itemsPerPage);
-    console.log('MaxPages : ' + this.maxPages);
-    console.log('Header : ' + headers.get('X-Total-Count'));
+    // if user is searching after using pagination. CurrentPage value is greater in this case. So need to adjust accordingly
+    if (this.currentPage > this.maxPages) {
+      this.currentPage = 1;
+    }
     this.students = data;
   }
 
