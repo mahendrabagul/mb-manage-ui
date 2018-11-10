@@ -9,7 +9,7 @@ import {DashboardComponent} from './components/dashboard/dashboard.component';
 import {StudentsComponent} from './components/students/students.component';
 import {StudentDetailComponent} from './components/student-detail/student-detail.component';
 import {StudentAddComponent} from './components/student-add/student-add.component';
-import {StudentEditComponent} from './components/student-edit/student-edit.component';
+import {StudentUpdateComponent} from './components/student-update/student-update.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {NgxPaginationModule} from 'ngx-pagination';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
@@ -41,7 +41,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     StudentsComponent,
     StudentDetailComponent,
     StudentAddComponent,
-    StudentEditComponent,
+    StudentUpdateComponent,
     StylishPaginationComponent,
     TenantHeaderComponent,
     PageNotFoundComponent

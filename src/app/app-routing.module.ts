@@ -5,7 +5,7 @@ import {DashboardComponent} from './components/dashboard/dashboard.component';
 import {StudentsComponent} from './components/students/students.component';
 import {StudentDetailComponent} from './components/student-detail/student-detail.component';
 import {StudentAddComponent} from './components/student-add/student-add.component';
-import {StudentEditComponent} from './components/student-edit/student-edit.component';
+import {StudentUpdateComponent} from './components/student-update/student-update.component';
 import {AuthGuardService} from './services/auth-guard/auth-guard.service';
 import {RoleGuardService} from './services/role-guard/role-guard.service';
 import {PageNotFoundComponent} from './components/page-not-found/page-not-found.component';
@@ -40,9 +40,9 @@ const routes: Routes = [
     canActivate: [AuthGuardService]
   },
   {
-    path: 'student-edit/:studentId',
-    component: StudentEditComponent,
-    data: {title: 'Edit Student'},
+    path: 'student-update/:studentId',
+    component: StudentUpdateComponent,
+    data: {title: 'Update Student'},
     canActivate: [AuthGuardService]
   },
   {

@@ -26,7 +26,7 @@ const mockData = [
           'tenantName': 'Pune Institute of Computer Technology',
         }
       },
-      'modifiedBy': {
+      'updatedBy': {
         'userName': 'npawar',
         'email': 'npawar@pict.ac.in',
         'tenant': {
@@ -56,7 +56,7 @@ const mockData = [
           'tenantName': 'Pune Institute of Computer Technology',
         }
       },
-      'modifiedBy': {
+      'updatedBy': {
         'userName': 'stambe',
         'email': 'stambe@pict.ac.in',
         'tenant': {

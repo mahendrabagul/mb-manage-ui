@@ -10,6 +10,6 @@ export class Student {
   createdAt?: string;
   updatedAt?: string;
   createdBy?: User;
-  modifiedBy?: User;
+  updatedBy?: User;
   tenant?: any;
 }

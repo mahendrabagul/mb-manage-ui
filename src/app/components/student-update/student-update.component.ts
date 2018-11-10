@@ -6,11 +6,11 @@ import {CommonService} from 'src/app/services/common/common.service';
 import {TokenService} from '../../services/token/token.service';
 
 @Component({
-  selector: 'app-student-edit',
-  templateUrl: './student-edit.component.html',
-  styleUrls: ['./student-edit.component.css']
+  selector: 'app-student-update',
+  templateUrl: './student-update.component.html',
+  styleUrls: ['./student-update.component.css']
 })
-export class StudentEditComponent implements OnInit {
+export class StudentUpdateComponent implements OnInit {
   angForm = new FormGroup({
     fullName: new FormControl(Validators.required),
     city: new FormControl('', Validators.required),
@@ -21,7 +21,7 @@ export class StudentEditComponent implements OnInit {
     updatedAt: new FormControl(''),
     studentId: new FormControl(''),
     createdBy: new FormControl(''),
-    modifiedBy: new FormControl(''),
+    updatedBy: new FormControl(''),
     tenant: new FormControl('')
   });
   degrees: string[];
@@ -50,10 +50,10 @@ export class StudentEditComponent implements OnInit {
     this.angForm.setValue(student);
   }
 
-  editStudent() {
+  updateStudent() {
     this.route.params.subscribe(params => {
       const student = this.angForm.value;
-      this.studentService.editStudent(student.studentId, student).subscribe(
+      this.studentService.updateStudent(student.studentId, student).subscribe(
         result => console.log(result)
       );
       this.router.navigate(['students']);

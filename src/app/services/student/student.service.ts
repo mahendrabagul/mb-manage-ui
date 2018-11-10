@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Observable, of} from 'rxjs';
-import {HttpClient, HttpHeaders, HttpResponse} from '@angular/common/http';
+import {HttpClient, HttpHeaders, HttpParams, HttpResponse} from '@angular/common/http';
 import {catchError, tap} from 'rxjs/operators';
 
 import {Student} from '../../models/student';
@@ -24,10 +24,13 @@ export class StudentService {
   }
 
   getStudents(req?: any, searchKeyWord?: string): Observable<HttpResponse<Student[]>> {
-    const options = createRequestOption(req);
+    console.log('Mahendra :' + searchKeyWord);
+    let options = createRequestOption(req);
     let newUrl = this.apiUrl;
-    if (searchKeyWord !== '' || searchKeyWord !== undefined) {
+    if (searchKeyWord !== '' && searchKeyWord !== undefined) {
       newUrl = newUrl + '?searchKeyWord=' + searchKeyWord + '&';
+      options = new HttpParams();
+      console.log('here : mahendra');
     } else {
       newUrl = newUrl + '?';
     }
@@ -43,24 +46,24 @@ export class StudentService {
   }
 
   addStudent(new_student): Observable<Student> {
-    return this.http.post<Student>(this.apiUrl, this.addCreatedByAndModifiedBy(new_student), httpOptions).pipe(
+    return this.http.post<Student>(this.apiUrl, this.addCreatedByAndUpdatedBy(new_student), httpOptions).pipe(
       tap((student: Student) => console.log(`added student studentId=${student.studentId}`)),
       catchError(this.handleError<Student>('addStudent'))
     );
   }
 
-  addCreatedByAndModifiedBy(student: Student) {
+  addCreatedByAndUpdatedBy(student: Student) {
     const user = new User();
     user.userName = this.tokenService.getUserNameFromToken();
     if (student.createdBy === undefined
       || student.createdBy === null) {
       student.createdBy = user;
     }
-    student.modifiedBy = user;
+    student.updatedBy = user;
     return student;
   }
 
-  editStudent(studentId, student): Observable<any> {
+  updateStudent(studentId, student): Observable<any> {
     const url = `${this.apiUrl}/${studentId}`;
     return this.http.put(url, student, httpOptions).pipe(
       tap(_ => console.log(`updated student studentId=${studentId}`)),

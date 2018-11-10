@@ -20,7 +20,7 @@ export class StudentsComponent implements OnInit {
    totalItems: number;
    maxPages = 0;
    modalRef: BsModalRef;
-   searchKeyWord = '';
+   searchKeyWord = undefined;
 
   constructor(private modalService: BsModalService, private studentService: StudentService,
               private spinner: NgxSpinnerService,
@@ -41,8 +41,8 @@ export class StudentsComponent implements OnInit {
     this.router.navigateByUrl('/student-details/' + studentId);
   }
 
-  editStudent(studentId: string) {
-    this.router.navigateByUrl('/student-edit/' + studentId);
+  updateStudent(studentId: string) {
+    this.router.navigateByUrl('/student-update/' + studentId);
   }
 
   ngOnInit() {
