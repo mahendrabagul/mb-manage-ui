@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Observable, of} from 'rxjs';
-import {HttpClient, HttpHeaders, HttpParams, HttpResponse} from '@angular/common/http';
+import {HttpClient, HttpHeaders, HttpResponse} from '@angular/common/http';
 import {catchError, tap} from 'rxjs/operators';
 
 import {Student} from '../../models/student';
@@ -24,13 +24,10 @@ export class StudentService {
   }
 
   getStudents(req?: any, searchKeyWord?: string): Observable<HttpResponse<Student[]>> {
-    console.log('Mahendra :' + searchKeyWord);
-    let options = createRequestOption(req);
+    const options = createRequestOption(req);
     let newUrl = this.apiUrl;
     if (searchKeyWord !== '' && searchKeyWord !== undefined) {
       newUrl = newUrl + '?searchKeyWord=' + searchKeyWord + '&';
-      options = new HttpParams();
-      console.log('here : mahendra');
     } else {
       newUrl = newUrl + '?';
     }
