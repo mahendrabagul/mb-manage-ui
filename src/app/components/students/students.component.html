@@ -17,25 +17,25 @@
       <table class="table table-hover table-striped table-borderless">
         <thead class="thead-dark">
         <tr>
-          <th>Role Number</th>
           <th>Name</th>
+          <th>Role Number</th>
           <th>Degree</th>
-          <th>Admission Year</th>
-          <th>Admission Date</th>
+          <!--<th>Admission Year</th>-->
           <th>City</th>
+          <th>Admission Date</th>
           <th colspan="2">Actions</th>
         </tr>
         </thead>
         <tbody>
         <tr *ngFor="let student of students">
+          <td> {{student.fullName}}</td>
           <td><a style="color: blue;text-decoration: underline" (click)="goToDetails(student.studentId)">
             {{student.rollNumber}}</a>
           </td>
-          <td> {{student.fullName}}</td>
           <td> {{student.degree}}</td>
-          <td> {{student.admissionYear}}</td>
-          <td> {{student.createdAt | truncatedate}}</td>
+          <!--<td> {{student.admissionYear}}</td>-->
           <td> {{student.city}}</td>
+          <td> {{student.createdAt | truncatedate}}</td>
           <td>
             <button class="btn btn-primary"
                     (click)="updateStudent(student.studentId)">
