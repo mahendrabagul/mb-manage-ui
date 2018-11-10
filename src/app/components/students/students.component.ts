@@ -22,7 +22,7 @@ export class StudentsComponent implements OnInit {
    modalRef: BsModalRef;
    searchKeyWord = '';
 
-  constructor(private modalService: BsModalService, private studentApiService: StudentService,
+  constructor(private modalService: BsModalService, private studentService: StudentService,
               private spinner: NgxSpinnerService,
               private router: Router, private tokenService: TokenService) {
   }
@@ -51,7 +51,7 @@ export class StudentsComponent implements OnInit {
 
   loadDetailsByPage() {
     this.spinner.show();
-    this.studentApiService.getStudents(this.buildPageRequest(), this.searchKeyWord)
+    this.studentService.getStudents(this.buildPageRequest(), this.searchKeyWord)
       .subscribe((res: HttpResponse<Student[]>) => {
         this.paginateStudents(res.body, res.headers);
         setTimeout(() => {
@@ -81,7 +81,7 @@ export class StudentsComponent implements OnInit {
   }
 
   confirm(studentId: string): void {
-    this.studentApiService.deleteStudent(studentId).subscribe(
+    this.studentService.deleteStudent(studentId).subscribe(
       result => {
         this.loadDetailsByPage();
       }

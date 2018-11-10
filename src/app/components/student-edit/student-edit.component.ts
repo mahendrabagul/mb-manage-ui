@@ -29,7 +29,7 @@ export class StudentEditComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
               private router: Router,
-              private studentApiService: StudentService,
+              private studentService: StudentService,
               private commonService: CommonService) {
   }
 
@@ -40,7 +40,7 @@ export class StudentEditComponent implements OnInit {
     });
     this.route.params.subscribe(params => {
       const studentId = params['studentId'];
-      this.studentApiService.getStudent(studentId).subscribe(student => {
+      this.studentService.getStudent(studentId).subscribe(student => {
         this.setValue(student);
       });
     });
@@ -53,7 +53,7 @@ export class StudentEditComponent implements OnInit {
   editStudent() {
     this.route.params.subscribe(params => {
       const student = this.angForm.value;
-      this.studentApiService.editStudent(student.studentId, student).subscribe(
+      this.studentService.editStudent(student.studentId, student).subscribe(
         result => console.log(result)
       );
       this.router.navigate(['students']);

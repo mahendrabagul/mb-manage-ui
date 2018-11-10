@@ -8,6 +8,8 @@ import {BsDropdownModule} from 'ngx-bootstrap/dropdown';
 import {BsModalService} from 'ngx-bootstrap';
 import {HttpClientModule} from '@angular/common/http';
 import {RouterTestingModule} from '@angular/router/testing';
+import {StudentService} from '../../services/student/student.service';
+import {MockStudentService} from '../../services/student/student.service.mock';
 
 describe('StudentsComponent', () => {
   let component: StudentsComponent;
@@ -18,7 +20,12 @@ describe('StudentsComponent', () => {
       declarations: [StudentsComponent, TruncateDatePipe],
       schemas: [NO_ERRORS_SCHEMA],
       imports: [FormsModule, BsDropdownModule.forRoot(), HttpClientModule, RouterTestingModule],
-      providers: [BsModalService]
+      providers: [BsModalService,
+        {
+          provide: StudentService,
+          useClass: MockStudentService
+        }
+      ]
     })
       .compileComponents();
   }));

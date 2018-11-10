@@ -27,7 +27,7 @@ export class StudentAddComponent implements OnInit {
   });
 
   constructor(private router: Router,
-              private studentApiService: StudentService,
+              private studentService: StudentService,
               private fb: FormBuilder,
               private commonService: CommonService) {
     this.createForm();
@@ -59,7 +59,7 @@ export class StudentAddComponent implements OnInit {
     student.city = formData.value.city;
     student.admissionYear = formData.value.admissionYear;
     student.degree = formData.value.degree;
-    this.studentApiService.addStudent(student).subscribe(
+    this.studentService.addStudent(student).subscribe(
       result => {
         this.router.navigate(['students']);
       }

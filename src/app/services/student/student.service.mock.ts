@@ -3,11 +3,11 @@ import {of} from 'rxjs/observable/of';
 import {Student} from '../../models/student';
 
 export class MockStudentService {
-  getHeroes(): Observable<Student[]> {
+  getStudents(): Observable<Student[]> {
     return of([]);
   }
 
-  getHero() {
+  getStudent() {
     return of({});
   }
 }
