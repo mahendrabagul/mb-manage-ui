@@ -1,11 +1,17 @@
+============================================================================================================
+
 **MB Manage Pvt. Ltd.**
 
 `An Online portal for colleges`
+
+============================================================================================================
 
 **Tech Stack**
 * Spring boot 2.1.0
 
 * Angular 7.0.3
+
+============================================================================================================
 
 **Steps to run** 
 
@@ -15,6 +21,8 @@
 `http://localhost:8080/mb-manage-service/api/v1/commons/populate`
 4. Go to `http://localhost:4200`
 5. Below are user details
+
+============================================================================================================
 
 **Tenant 1**
 
@@ -36,6 +44,8 @@ Shri Guru Gobind Singhji Institute of Engineering and Technology
 
 `Roles(clerk);`
 
+============================================================================================================
+
 **Tenant 2**
 
 Pune Institute of Computer Technology	
@@ -56,11 +66,15 @@ Roles(clerk, senior);
 
 `Roles(clerk);`
 
+============================================================================================================
 
 **To see client side documentation**
-1. Go to `mb-manage-ui/documentation` and fire **http-server** (you need to first run `npm install -g http-server`)
+1. Go to `mb-manage-ui/documentation` and fire **http-server** 
+   (you need to first run `npm install -g http-server`)
 
+============================================================================================================
 
 **To see server side documentation**
 1. Go to `http://localhost:8080/mb-manage-service/swagger-ui.html`
 
+============================================================================================================
