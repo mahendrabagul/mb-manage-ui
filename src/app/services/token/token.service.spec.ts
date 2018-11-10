@@ -20,8 +20,8 @@ describe('TokenService', () => {
         {provide: Router, useValue: mockRouter}
       ]
     });
-    mockRouter = TestBed.get(Router); // Add this
-    tokenService = TestBed.get(TokenService); // Add this
+    mockRouter = TestBed.get(Router);
+    tokenService = TestBed.get(TokenService);
   });
 
   it('should be created', () => {

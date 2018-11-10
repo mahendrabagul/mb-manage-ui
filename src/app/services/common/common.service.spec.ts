@@ -4,7 +4,6 @@ import {CommonService} from './common.service';
 import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
 
 describe('CommonService', () => {
-  let injector: TestBed;
   let service: CommonService;
   let httpMock: HttpTestingController;
   beforeEach(() => {
@@ -12,9 +11,8 @@ describe('CommonService', () => {
       imports: [HttpClientTestingModule],
       providers: [CommonService]
     });
-    injector = getTestBed();
-    service = injector.get(CommonService);
-    httpMock = injector.get(HttpTestingController);
+    service = TestBed.get(CommonService);
+    httpMock = TestBed.get(HttpTestingController);
   });
 
   afterEach(() => {
