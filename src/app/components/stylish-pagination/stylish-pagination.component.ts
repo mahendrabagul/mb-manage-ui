@@ -26,7 +26,7 @@ export class StylishPaginationComponent implements OnInit, OnChanges {
     if (this.maxPages) {
       this.createPages();
     }
-    this.currentPage = 1;
+    // this.currentPage = 1;
   }
 
   setPage(page: number, itemsPerPage: number) {
