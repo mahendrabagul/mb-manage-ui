@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Student} from 'src/app/models/student';
-import {StudentApiService} from 'src/app/services/student/student-api.service';
+import {StudentService} from 'src/app/services/student/student.service';
 import {ActivatedRoute} from '@angular/router';
 import {TokenService} from '../../services/token/token.service';
 
@@ -13,7 +13,7 @@ export class StudentDetailComponent implements OnInit {
   student: Student;
 
   constructor(private tokenService: TokenService, private route: ActivatedRoute,
-              private studentApiService: StudentApiService) {
+              private studentApiService: StudentService) {
   }
 
   ngOnInit() {

@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
-import {StudentApiService} from 'src/app/services/student/student-api.service';
+import {StudentService} from 'src/app/services/student/student.service';
 import {Student} from 'src/app/models/student';
 import {CommonService} from 'src/app/services/common/common.service';
 import {Router} from '@angular/router';
@@ -27,7 +27,7 @@ export class StudentAddComponent implements OnInit {
   });
 
   constructor(private router: Router,
-              private studentApiService: StudentApiService,
+              private studentApiService: StudentService,
               private fb: FormBuilder,
               private commonService: CommonService) {
     this.createForm();

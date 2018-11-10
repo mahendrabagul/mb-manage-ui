@@ -1,5 +1,5 @@
 import {Component, OnInit, TemplateRef} from '@angular/core';
-import {StudentApiService} from 'src/app/services/student/student-api.service';
+import {StudentService} from 'src/app/services/student/student.service';
 import {Router} from '@angular/router';
 import {TokenService} from 'src/app/services/token/token.service';
 import {HttpHeaders, HttpResponse} from '@angular/common/http';
@@ -22,7 +22,7 @@ export class StudentsComponent implements OnInit {
    modalRef: BsModalRef;
    searchKeyWord = '';
 
-  constructor(private modalService: BsModalService, private studentApiService: StudentApiService,
+  constructor(private modalService: BsModalService, private studentApiService: StudentService,
               private spinner: NgxSpinnerService,
               private router: Router, private tokenService: TokenService) {
   }

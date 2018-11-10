@@ -15,7 +15,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {AuthService} from './services/auth/auth.service';
 import {AuthGuardService} from './services/auth-guard/auth-guard.service';
-import {StudentApiService} from './services/student/student-api.service';
+import {StudentService} from './services/student/student.service';
 import {JwtInterceptor} from './helpers/JwtInterceptor';
 import {ErrorInterceptor} from './helpers/ErrorInterceptor';
 import {TruncateDatePipe} from './pipes/truncate-date-pipe';
@@ -63,7 +63,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
     {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
-    AuthService, AuthGuardService, StudentApiService, CommonService],
+    AuthService, AuthGuardService, StudentService, CommonService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -13,19 +13,19 @@ const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
 
-const apiUrl = environment.API_URL + '/api/v1/students';
-
 @Injectable({
   providedIn: 'root'
 })
-export class StudentApiService {
+export class StudentService {
+
+  apiUrl = environment.API_URL + '/api/v1/students';
 
   constructor(private http: HttpClient, private tokenService: TokenService) {
   }
 
   getStudents(req?: any, searchKeyWord?: string): Observable<HttpResponse<Student[]>> {
     const options = createRequestOption(req);
-    let newUrl = apiUrl;
+    let newUrl = this.apiUrl;
     if (searchKeyWord !== '' || searchKeyWord !== undefined) {
       newUrl = newUrl + '?searchKeyWord=' + searchKeyWord + '&';
     } else {
@@ -35,7 +35,7 @@ export class StudentApiService {
   }
 
   getStudent(studentId: string): Observable<Student> {
-    const url = `${apiUrl}/${studentId}`;
+    const url = `${this.apiUrl}/${studentId}`;
     return this.http.get<Student>(url).pipe(
       tap(_ => console.log(`fetched student studentId=${studentId}`)),
       catchError(this.handleError<Student>(`getStudent studentId=${studentId}`))
@@ -43,7 +43,7 @@ export class StudentApiService {
   }
 
   addStudent(new_student): Observable<Student> {
-    return this.http.post<Student>(apiUrl, this.addCreatedByAndModifiedBy(new_student), httpOptions).pipe(
+    return this.http.post<Student>(this.apiUrl, this.addCreatedByAndModifiedBy(new_student), httpOptions).pipe(
       tap((student: Student) => console.log(`added student studentId=${student.studentId}`)),
       catchError(this.handleError<Student>('addStudent'))
     );
@@ -61,7 +61,7 @@ export class StudentApiService {
   }
 
   editStudent(studentId, student): Observable<any> {
-    const url = `${apiUrl}/${studentId}`;
+    const url = `${this.apiUrl}/${studentId}`;
     return this.http.put(url, student, httpOptions).pipe(
       tap(_ => console.log(`updated student studentId=${studentId}`)),
       catchError(this.handleError<any>('updateStudent'))
@@ -69,7 +69,7 @@ export class StudentApiService {
   }
 
   deleteStudent(studentId): Observable<Student> {
-    const url = `${apiUrl}/${studentId}`;
+    const url = `${this.apiUrl}/${studentId}`;
     return this.http.delete<Student>(url, httpOptions).pipe(
       tap(_ => console.log(`deleted student studentId=${studentId}`)),
       catchError(this.handleError<Student>('deleteStudent'))
