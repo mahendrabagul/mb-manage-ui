@@ -68,7 +68,7 @@ export class StudentService {
 
   updateStudent(studentId, student): Observable<any> {
     const url = `${this.apiUrl}/${studentId}`;
-    return this.http.put(url, student, httpOptions).pipe(
+    return this.http.put(url, this.addCreatedByAndUpdatedBy(student), httpOptions).pipe(
       tap(_ => console.log(`updated student studentId=${studentId}`)),
       catchError(this.handleError<any>('updateStudent'))
     );
